@@ -12,6 +12,7 @@ var app = new Vue(
      addTask: function() {
        if (this.newTask != "") {
          this.tasks.push(this.newTask)
+         this.newTask = ""
        }
      }
    }

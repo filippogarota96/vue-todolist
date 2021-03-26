@@ -12,11 +12,9 @@
 <body>
   <div id="app">
     <ul v-if="tasks.length > 0">
-      <li v-for="(item, index) in tasks">
-        {{item}}<span @click="deleteItem(index)"> X</span>
-      </li>
+      <li v-for="(item, index) in tasks">{{item}} <span @click="deleteItem(index)">X</span></li>
     </ul>
-    <input type="text" placeholder="Inserisci un task" v-model ="newTask">
+    <input type="text" placeholder="Inserisci un task" v-model ="newTask" v-on:keydown.13 = "addTask">
     <button type="button" @click="addTask">Aggiungi un task</button>
   </div>
   <script src="js/script.js" charset="utf-8"></script>
