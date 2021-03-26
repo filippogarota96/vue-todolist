@@ -6,7 +6,7 @@ var app = new Vue(
    },
    methods: {
      deleteItem: function(tasksIndex) {
-      
+       this.tasks.splice(tasksIndex, 1)
      }
    }
  }
